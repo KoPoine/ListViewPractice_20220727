@@ -2,6 +2,7 @@ package com.neppplus.listviewpractice_20220727
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import com.neppplus.listviewpractice_20220727.adapters.StudentListViewAdapter
 import com.neppplus.listviewpractice_20220727.datas.StudentData
 import kotlinx.android.synthetic.main.activity_main.*
@@ -34,6 +35,16 @@ class MainActivity : AppCompatActivity() {
 
 //        xml에 있는 ListView와 어댑터 연결
         mainListView.adapter = mStudentListviewAdapter
+
+//        리스트뷰 클릭 이벤트 처리
+        mainListView.setOnItemClickListener { adapterView, view, position, l ->
+            Toast.makeText(this, "${mStudentList[position].name}님 클릭됨", Toast.LENGTH_SHORT).show()
+        }
+        
+        mainListView.setOnItemLongClickListener { adapterView, view, position, l ->
+            Toast.makeText(this, "${mStudentList[position].name}님 롱클릭됨", Toast.LENGTH_SHORT).show()
+            return@setOnItemLongClickListener true  // true - 롱클릭 이벤트 처리만 하는 코드
+        }
 
     }
 
