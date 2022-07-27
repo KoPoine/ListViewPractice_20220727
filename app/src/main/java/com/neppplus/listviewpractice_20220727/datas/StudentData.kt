@@ -1,4 +1,4 @@
-package com.neppplus.listviewpractice_20220727
+package com.neppplus.listviewpractice_20220727.datas
 
 class StudentData (
     val name : String,
