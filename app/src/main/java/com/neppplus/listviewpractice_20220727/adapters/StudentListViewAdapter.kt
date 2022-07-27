@@ -30,8 +30,11 @@ class StudentListViewAdapter(
 //        row.ageTxt.text = mList[position].birthYear.toString()
 
 //        변수를 활용한 String 가공
-        val koreanAge = 2022 - mList[position].birthYear + 1
-        row.ageTxt.text = "(${koreanAge}세)"
+//        val koreanAge = 2022 - mList[position].birthYear + 1
+//        row.ageTxt.text = "(${koreanAge}세)"
+
+//        mList[position] => position 번째 있는 StudentData
+        row.ageTxt.text = mList[position].getKoreanAge(2022)
 
         return row
     }
