@@ -42,7 +42,12 @@ class MainActivity : AppCompatActivity() {
         }
         
         mainListView.setOnItemLongClickListener { adapterView, view, position, l ->
-            Toast.makeText(this, "${mStudentList[position].name}님 롱클릭됨", Toast.LENGTH_SHORT).show()
+//            Toast.makeText(this, "${mStudentList[position].name}님 롱클릭됨", Toast.LENGTH_SHORT).show()
+//            길게 눌렀을 경우 해당 칸의 데이터(StudentData)를 삭제 로직
+            mStudentList.removeAt(position)
+//            어댑터 변수에게 데이터 변경 사실 통보
+            mStudentListviewAdapter.notifyDataSetChanged()
+
             return@setOnItemLongClickListener true  // true - 롱클릭 이벤트 처리만 하는 코드
         }
 
