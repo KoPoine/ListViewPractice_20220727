@@ -23,10 +23,10 @@ class MainActivity : AppCompatActivity() {
         mStudentList.add( StudentData("윤예은", "인천시 연수구", 1993) )
         mStudentList.add( StudentData("허신지", "서울시 종로구", 1998) )
         mStudentList.add( StudentData("유수아", "서울시 마포구", 1997) )
-        mStudentList.add( StudentData("유수아", "서울시 마포구", 1997) )
-        mStudentList.add( StudentData("유수아", "서울시 마포구", 1991) )
-        mStudentList.add( StudentData("유수아", "서울시 마포구", 1992) )
-        mStudentList.add( StudentData("유수아", "서울시 마포구", 1996) )
+        mStudentList.add( StudentData("김민철", "서울시 마포구", 1997) )
+        mStudentList.add( StudentData("김민철", "서울시 마포구", 1991) )
+        mStudentList.add( StudentData("김민철", "서울시 마포구", 1992) )
+        mStudentList.add( StudentData("김민철", "서울시 마포구", 1996) )
 
 //        어댑터 객체화 => 우리가 만들어놓은 ArrayList를 전달
         mStudentListviewAdapter = StudentListViewAdapter(

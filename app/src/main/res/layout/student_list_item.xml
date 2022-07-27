@@ -33,7 +33,7 @@
                 android:id="@+id/ageTxt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="나이자리"/>
+                android:text="(~세)"/>
 
         </LinearLayout>
 
